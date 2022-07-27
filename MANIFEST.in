@@ -1,4 +1,3 @@
 recursive-include wyhash  *
-recursive-include dep/include  *
-recursive-include dep/src  *
+recursive-include dep  *
 include README.markdown
