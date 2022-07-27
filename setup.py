@@ -27,8 +27,6 @@ class build_ext_compiler_check(build_ext):
         args = BUILD_ARGS[compiler]
         for ext in self.extensions:
             ext.extra_compile_args = args
-            if self.compiler.compiler_type == "msvc":
-                ext.define_macros.extend([("restrict", "__restrict")])
         super().build_extensions()
 
 
@@ -101,7 +99,7 @@ def main():
         url="https://github.com/synodriver/python-wyhash",
         packages=packages,
         keywords=["hash"],
-        description="bz3 compress and decompress",
+        description="python binding for wyhash",
         long_description_content_type="text/markdown",
         long_description=dis,
         author="synodriver",
