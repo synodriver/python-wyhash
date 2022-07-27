@@ -8,7 +8,7 @@ impl = platform.python_implementation()
 
 
 def _should_use_cffi() -> bool:
-    ev = os.getenv("B14_USE_CFFI")
+    ev = os.getenv("WYHASH_USE_CFFI")
     if ev is not None:
         return True
     if impl == "CPython":
