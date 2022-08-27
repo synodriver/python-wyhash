@@ -6,7 +6,7 @@ from libc.stdint cimport uint8_t, uint64_t
 from wyhash.backends.cython cimport wyhash
 
 
-cpdef inline uint64_t hash(const uint8_t[::1] data, uint64_t seed, const uint8_t[::1] secret) except? 0:
+cpdef inline uint64_t hash(const uint8_t[::1] data, uint64_t seed, const uint8_t[::1] secret):
     """
     generate hash
     :param data: bytes or bytearray to hash
