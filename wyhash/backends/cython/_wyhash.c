@@ -7,12 +7,12 @@
         "include_dirs": [
             "./dep"
         ],
-        "name": "wyhash.backends.cython._hash_cy",
+        "name": "wyhash.backends.cython._wyhash",
         "sources": [
-            "wyhash/backends/cython/_hash_cy.pyx"
+            "wyhash/backends/cython/_wyhash.pyx"
         ]
     },
-    "module_name": "wyhash.backends.cython._hash_cy"
+    "module_name": "wyhash.backends.cython._wyhash"
 }
 END: Cython Metadata */
 
@@ -754,8 +754,8 @@ static CYTHON_INLINE float __PYX_NAN() {
   #endif
 #endif
 
-#define __PYX_HAVE__wyhash__backends__cython___hash_cy
-#define __PYX_HAVE_API__wyhash__backends__cython___hash_cy
+#define __PYX_HAVE__wyhash__backends__cython___wyhash
+#define __PYX_HAVE_API__wyhash__backends__cython___wyhash
 /* Early includes */
 #include <string.h>
 #include <stdio.h>
@@ -973,7 +973,7 @@ static const char *__pyx_filename;
 
 
 static const char *__pyx_f[] = {
-  "wyhash/backends/cython/_hash_cy.pyx",
+  "wyhash/backends/cython/_wyhash.pyx",
   "stringsource",
   "type.pxd",
 };
@@ -1880,7 +1880,7 @@ static PyTypeObject *__pyx_ptype_7cpython_4type_type = 0;
 
 /* Module declarations from 'wyhash.backends.cython.wyhash' */
 
-/* Module declarations from 'wyhash.backends.cython._hash_cy' */
+/* Module declarations from 'wyhash.backends.cython._wyhash' */
 static PyTypeObject *__pyx_array_type = 0;
 static PyTypeObject *__pyx_MemviewEnum_type = 0;
 static PyTypeObject *__pyx_memoryview_type = 0;
@@ -1892,8 +1892,8 @@ static PyObject *contiguous = 0;
 static PyObject *indirect_contiguous = 0;
 static int __pyx_memoryview_thread_locks_used;
 static PyThread_type_lock __pyx_memoryview_thread_locks[8];
-static CYTHON_INLINE uint64_t __pyx_f_6wyhash_8backends_6cython_8_hash_cy_hash(__Pyx_memviewslice, uint64_t, __Pyx_memviewslice, int __pyx_skip_dispatch); /*proto*/
-static CYTHON_INLINE PyObject *__pyx_f_6wyhash_8backends_6cython_8_hash_cy_make_secret(uint64_t, int __pyx_skip_dispatch); /*proto*/
+static CYTHON_INLINE uint64_t __pyx_f_6wyhash_8backends_6cython_7_wyhash_hash(__Pyx_memviewslice, uint64_t, __Pyx_memviewslice, int __pyx_skip_dispatch); /*proto*/
+static CYTHON_INLINE PyObject *__pyx_f_6wyhash_8backends_6cython_7_wyhash_make_secret(uint64_t, int __pyx_skip_dispatch); /*proto*/
 static struct __pyx_array_obj *__pyx_array_new(PyObject *, Py_ssize_t, char *, char *, char *); /*proto*/
 static void *__pyx_align_pointer(void *, size_t); /*proto*/
 static PyObject *__pyx_memoryview_new(PyObject *, int, int, __Pyx_TypeInfo *); /*proto*/
@@ -1928,11 +1928,11 @@ static void __pyx_memoryview_slice_assign_scalar(__Pyx_memviewslice *, int, size
 static void __pyx_memoryview__slice_assign_scalar(char *, Py_ssize_t *, Py_ssize_t *, int, size_t, void *); /*proto*/
 static PyObject *__pyx_unpickle_Enum__set_state(struct __pyx_MemviewEnum_obj *, PyObject *); /*proto*/
 static __Pyx_TypeInfo __Pyx_TypeInfo_nn_uint8_t__const__ = { "const uint8_t", NULL, sizeof(uint8_t const ), { 0 }, 0, IS_UNSIGNED(uint8_t const ) ? 'U' : 'I', IS_UNSIGNED(uint8_t const ), 0 };
-#define __Pyx_MODULE_NAME "wyhash.backends.cython._hash_cy"
-extern int __pyx_module_is_main_wyhash__backends__cython___hash_cy;
-int __pyx_module_is_main_wyhash__backends__cython___hash_cy = 0;
+#define __Pyx_MODULE_NAME "wyhash.backends.cython._wyhash"
+extern int __pyx_module_is_main_wyhash__backends__cython___wyhash;
+int __pyx_module_is_main_wyhash__backends__cython___wyhash = 0;
 
-/* Implementation of 'wyhash.backends.cython._hash_cy' */
+/* Implementation of 'wyhash.backends.cython._wyhash' */
 static PyObject *__pyx_builtin_ValueError;
 static PyObject *__pyx_builtin_MemoryError;
 static PyObject *__pyx_builtin_enumerate;
@@ -2117,8 +2117,8 @@ static PyObject *__pyx_kp_s_unable_to_allocate_array_data;
 static PyObject *__pyx_kp_s_unable_to_allocate_shape_and_str;
 static PyObject *__pyx_n_s_unpack;
 static PyObject *__pyx_n_s_update;
-static PyObject *__pyx_pf_6wyhash_8backends_6cython_8_hash_cy_hash(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_data, uint64_t __pyx_v_seed, __Pyx_memviewslice __pyx_v_secret); /* proto */
-static PyObject *__pyx_pf_6wyhash_8backends_6cython_8_hash_cy_2make_secret(CYTHON_UNUSED PyObject *__pyx_self, uint64_t __pyx_v_seed); /* proto */
+static PyObject *__pyx_pf_6wyhash_8backends_6cython_7_wyhash_hash(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_data, uint64_t __pyx_v_seed, __Pyx_memviewslice __pyx_v_secret); /* proto */
+static PyObject *__pyx_pf_6wyhash_8backends_6cython_7_wyhash_2make_secret(CYTHON_UNUSED PyObject *__pyx_self, uint64_t __pyx_v_seed); /* proto */
 static int __pyx_array___pyx_pf_15View_dot_MemoryView_5array___cinit__(struct __pyx_array_obj *__pyx_v_self, PyObject *__pyx_v_shape, Py_ssize_t __pyx_v_itemsize, PyObject *__pyx_v_format, PyObject *__pyx_v_mode, int __pyx_v_allocate_buffer); /* proto */
 static int __pyx_array___pyx_pf_15View_dot_MemoryView_5array_2__getbuffer__(struct __pyx_array_obj *__pyx_v_self, Py_buffer *__pyx_v_info, int __pyx_v_flags); /* proto */
 static void __pyx_array___pyx_pf_15View_dot_MemoryView_5array_4__dealloc__(struct __pyx_array_obj *__pyx_v_self); /* proto */
@@ -2199,16 +2199,16 @@ static PyObject *__pyx_tuple__25;
 static PyObject *__pyx_codeobj__26;
 /* Late includes */
 
-/* "wyhash/backends/cython/_hash_cy.pyx":9
+/* "wyhash/backends/cython/_wyhash.pyx":9
  * 
  * 
- * cpdef inline uint64_t hash(const uint8_t[::1] data, uint64_t seed, const uint8_t[::1] secret) except? 0:             # <<<<<<<<<<<<<<
+ * cpdef inline uint64_t hash(const uint8_t[::1] data, uint64_t seed, const uint8_t[::1] secret):             # <<<<<<<<<<<<<<
  *     """
  *     generate hash
  */
 
-static PyObject *__pyx_pw_6wyhash_8backends_6cython_8_hash_cy_1hash(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static CYTHON_INLINE uint64_t __pyx_f_6wyhash_8backends_6cython_8_hash_cy_hash(__Pyx_memviewslice __pyx_v_data, uint64_t __pyx_v_seed, __Pyx_memviewslice __pyx_v_secret, CYTHON_UNUSED int __pyx_skip_dispatch) {
+static PyObject *__pyx_pw_6wyhash_8backends_6cython_7_wyhash_1hash(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static CYTHON_INLINE uint64_t __pyx_f_6wyhash_8backends_6cython_7_wyhash_hash(__Pyx_memviewslice __pyx_v_data, uint64_t __pyx_v_seed, __Pyx_memviewslice __pyx_v_secret, CYTHON_UNUSED int __pyx_skip_dispatch) {
   uint64_t __pyx_v_ret;
   uint64_t __pyx_r;
   __Pyx_RefNannyDeclarations
@@ -2216,7 +2216,7 @@ static CYTHON_INLINE uint64_t __pyx_f_6wyhash_8backends_6cython_8_hash_cy_hash(_
   Py_ssize_t __pyx_t_2;
   __Pyx_RefNannySetupContext("hash", 0);
 
-  /* "wyhash/backends/cython/_hash_cy.pyx":18
+  /* "wyhash/backends/cython/_wyhash.pyx":18
  *     """
  *     cdef uint64_t ret
  *     with nogil:             # <<<<<<<<<<<<<<
@@ -2231,7 +2231,7 @@ static CYTHON_INLINE uint64_t __pyx_f_6wyhash_8backends_6cython_8_hash_cy_hash(_
       #endif
       /*try:*/ {
 
-        /* "wyhash/backends/cython/_hash_cy.pyx":19
+        /* "wyhash/backends/cython/_wyhash.pyx":19
  *     cdef uint64_t ret
  *     with nogil:
  *         ret = wyhash.wyhash(<void*>&data[0], <size_t>data.shape[0], seed, <uint64_t*>&secret[0])             # <<<<<<<<<<<<<<
@@ -2243,7 +2243,7 @@ static CYTHON_INLINE uint64_t __pyx_f_6wyhash_8backends_6cython_8_hash_cy_hash(_
         __pyx_v_ret = wyhash(((void *)(&(*((uint8_t const  *) ( /* dim=0 */ ((char *) (((uint8_t const  *) __pyx_v_data.data) + __pyx_t_1)) ))))), ((size_t)(__pyx_v_data.shape[0])), __pyx_v_seed, ((uint64_t *)(&(*((uint8_t const  *) ( /* dim=0 */ ((char *) (((uint8_t const  *) __pyx_v_secret.data) + __pyx_t_2)) ))))));
       }
 
-      /* "wyhash/backends/cython/_hash_cy.pyx":18
+      /* "wyhash/backends/cython/_wyhash.pyx":18
  *     """
  *     cdef uint64_t ret
  *     with nogil:             # <<<<<<<<<<<<<<
@@ -2262,7 +2262,7 @@ static CYTHON_INLINE uint64_t __pyx_f_6wyhash_8backends_6cython_8_hash_cy_hash(_
       }
   }
 
-  /* "wyhash/backends/cython/_hash_cy.pyx":20
+  /* "wyhash/backends/cython/_wyhash.pyx":20
  *     with nogil:
  *         ret = wyhash.wyhash(<void*>&data[0], <size_t>data.shape[0], seed, <uint64_t*>&secret[0])
  *     return ret             # <<<<<<<<<<<<<<
@@ -2272,10 +2272,10 @@ static CYTHON_INLINE uint64_t __pyx_f_6wyhash_8backends_6cython_8_hash_cy_hash(_
   __pyx_r = __pyx_v_ret;
   goto __pyx_L0;
 
-  /* "wyhash/backends/cython/_hash_cy.pyx":9
+  /* "wyhash/backends/cython/_wyhash.pyx":9
  * 
  * 
- * cpdef inline uint64_t hash(const uint8_t[::1] data, uint64_t seed, const uint8_t[::1] secret) except? 0:             # <<<<<<<<<<<<<<
+ * cpdef inline uint64_t hash(const uint8_t[::1] data, uint64_t seed, const uint8_t[::1] secret):             # <<<<<<<<<<<<<<
  *     """
  *     generate hash
  */
@@ -2287,9 +2287,9 @@ static CYTHON_INLINE uint64_t __pyx_f_6wyhash_8backends_6cython_8_hash_cy_hash(_
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6wyhash_8backends_6cython_8_hash_cy_1hash(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_6wyhash_8backends_6cython_8_hash_cy_hash[] = "hash(const uint8_t[::1] data, uint64_t seed, const uint8_t[::1] secret) -> uint64_t\n\n    generate hash\n    :param data: bytes or bytearray to hash\n    :param seed: an integer\n    :param secret: 32 bytes random secret\n    :return: \n    ";
-static PyObject *__pyx_pw_6wyhash_8backends_6cython_8_hash_cy_1hash(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_6wyhash_8backends_6cython_7_wyhash_1hash(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_6wyhash_8backends_6cython_7_wyhash_hash[] = "hash(const uint8_t[::1] data, uint64_t seed, const uint8_t[::1] secret) -> uint64_t\n\n    generate hash\n    :param data: bytes or bytearray to hash\n    :param seed: an integer\n    :param secret: 32 bytes random secret\n    :return: \n    ";
+static PyObject *__pyx_pw_6wyhash_8backends_6cython_7_wyhash_1hash(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   __Pyx_memviewslice __pyx_v_data = { 0, 0, { 0 }, { 0 }, { 0 } };
   uint64_t __pyx_v_seed;
   __Pyx_memviewslice __pyx_v_secret = { 0, 0, { 0 }, { 0 }, { 0 } };
@@ -2351,22 +2351,21 @@ static PyObject *__pyx_pw_6wyhash_8backends_6cython_8_hash_cy_1hash(PyObject *__
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("hash", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 9, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("wyhash.backends.cython._hash_cy.hash", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("wyhash.backends.cython._wyhash.hash", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_6wyhash_8backends_6cython_8_hash_cy_hash(__pyx_self, __pyx_v_data, __pyx_v_seed, __pyx_v_secret);
+  __pyx_r = __pyx_pf_6wyhash_8backends_6cython_7_wyhash_hash(__pyx_self, __pyx_v_data, __pyx_v_seed, __pyx_v_secret);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6wyhash_8backends_6cython_8_hash_cy_hash(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_data, uint64_t __pyx_v_seed, __Pyx_memviewslice __pyx_v_secret) {
+static PyObject *__pyx_pf_6wyhash_8backends_6cython_7_wyhash_hash(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_data, uint64_t __pyx_v_seed, __Pyx_memviewslice __pyx_v_secret) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
-  uint64_t __pyx_t_1;
-  PyObject *__pyx_t_2 = NULL;
+  PyObject *__pyx_t_1 = NULL;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
@@ -2374,17 +2373,16 @@ static PyObject *__pyx_pf_6wyhash_8backends_6cython_8_hash_cy_hash(CYTHON_UNUSED
   __Pyx_XDECREF(__pyx_r);
   if (unlikely(!__pyx_v_data.memview)) { __Pyx_RaiseUnboundLocalError("data"); __PYX_ERR(0, 9, __pyx_L1_error) }
   if (unlikely(!__pyx_v_secret.memview)) { __Pyx_RaiseUnboundLocalError("secret"); __PYX_ERR(0, 9, __pyx_L1_error) }
-  __pyx_t_1 = __pyx_f_6wyhash_8backends_6cython_8_hash_cy_hash(__pyx_v_data, __pyx_v_seed, __pyx_v_secret, 0); if (unlikely(__pyx_t_1 == ((uint64_t)0) && PyErr_Occurred())) __PYX_ERR(0, 9, __pyx_L1_error)
-  __pyx_t_2 = __Pyx_PyInt_From_uint64_t(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 9, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_2);
-  __pyx_r = __pyx_t_2;
-  __pyx_t_2 = 0;
+  __pyx_t_1 = __Pyx_PyInt_From_uint64_t(__pyx_f_6wyhash_8backends_6cython_7_wyhash_hash(__pyx_v_data, __pyx_v_seed, __pyx_v_secret, 0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 9, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_r = __pyx_t_1;
+  __pyx_t_1 = 0;
   goto __pyx_L0;
 
   /* function exit code */
   __pyx_L1_error:;
-  __Pyx_XDECREF(__pyx_t_2);
-  __Pyx_AddTraceback("wyhash.backends.cython._hash_cy.hash", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_XDECREF(__pyx_t_1);
+  __Pyx_AddTraceback("wyhash.backends.cython._wyhash.hash", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __PYX_XDEC_MEMVIEW(&__pyx_v_data, 1);
@@ -2394,7 +2392,7 @@ static PyObject *__pyx_pf_6wyhash_8backends_6cython_8_hash_cy_hash(CYTHON_UNUSED
   return __pyx_r;
 }
 
-/* "wyhash/backends/cython/_hash_cy.pyx":22
+/* "wyhash/backends/cython/_wyhash.pyx":22
  *     return ret
  * 
  * cpdef inline bytes make_secret(uint64_t seed):             # <<<<<<<<<<<<<<
@@ -2402,8 +2400,8 @@ static PyObject *__pyx_pf_6wyhash_8backends_6cython_8_hash_cy_hash(CYTHON_UNUSED
  *     make 32byte secret
  */
 
-static PyObject *__pyx_pw_6wyhash_8backends_6cython_8_hash_cy_3make_secret(PyObject *__pyx_self, PyObject *__pyx_arg_seed); /*proto*/
-static CYTHON_INLINE PyObject *__pyx_f_6wyhash_8backends_6cython_8_hash_cy_make_secret(uint64_t __pyx_v_seed, CYTHON_UNUSED int __pyx_skip_dispatch) {
+static PyObject *__pyx_pw_6wyhash_8backends_6cython_7_wyhash_3make_secret(PyObject *__pyx_self, PyObject *__pyx_arg_seed); /*proto*/
+static CYTHON_INLINE PyObject *__pyx_f_6wyhash_8backends_6cython_7_wyhash_make_secret(uint64_t __pyx_v_seed, CYTHON_UNUSED int __pyx_skip_dispatch) {
   uint64_t __pyx_v__wyp[4];
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
@@ -2413,7 +2411,7 @@ static CYTHON_INLINE PyObject *__pyx_f_6wyhash_8backends_6cython_8_hash_cy_make_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("make_secret", 0);
 
-  /* "wyhash/backends/cython/_hash_cy.pyx":29
+  /* "wyhash/backends/cython/_wyhash.pyx":29
  *     """
  *     cdef uint64_t _wyp[4]
  *     with nogil:             # <<<<<<<<<<<<<<
@@ -2428,7 +2426,7 @@ static CYTHON_INLINE PyObject *__pyx_f_6wyhash_8backends_6cython_8_hash_cy_make_
       #endif
       /*try:*/ {
 
-        /* "wyhash/backends/cython/_hash_cy.pyx":30
+        /* "wyhash/backends/cython/_wyhash.pyx":30
  *     cdef uint64_t _wyp[4]
  *     with nogil:
  *         wyhash.make_secret(seed, _wyp)             # <<<<<<<<<<<<<<
@@ -2437,7 +2435,7 @@ static CYTHON_INLINE PyObject *__pyx_f_6wyhash_8backends_6cython_8_hash_cy_make_
         make_secret(__pyx_v_seed, __pyx_v__wyp);
       }
 
-      /* "wyhash/backends/cython/_hash_cy.pyx":29
+      /* "wyhash/backends/cython/_wyhash.pyx":29
  *     """
  *     cdef uint64_t _wyp[4]
  *     with nogil:             # <<<<<<<<<<<<<<
@@ -2456,7 +2454,7 @@ static CYTHON_INLINE PyObject *__pyx_f_6wyhash_8backends_6cython_8_hash_cy_make_
       }
   }
 
-  /* "wyhash/backends/cython/_hash_cy.pyx":31
+  /* "wyhash/backends/cython/_wyhash.pyx":31
  *     with nogil:
  *         wyhash.make_secret(seed, _wyp)
  *     return PyBytes_FromStringAndSize(<char*>_wyp, 32)             # <<<<<<<<<<<<<<
@@ -2468,7 +2466,7 @@ static CYTHON_INLINE PyObject *__pyx_f_6wyhash_8backends_6cython_8_hash_cy_make_
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "wyhash/backends/cython/_hash_cy.pyx":22
+  /* "wyhash/backends/cython/_wyhash.pyx":22
  *     return ret
  * 
  * cpdef inline bytes make_secret(uint64_t seed):             # <<<<<<<<<<<<<<
@@ -2479,7 +2477,7 @@ static CYTHON_INLINE PyObject *__pyx_f_6wyhash_8backends_6cython_8_hash_cy_make_
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("wyhash.backends.cython._hash_cy.make_secret", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("wyhash.backends.cython._wyhash.make_secret", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -2488,9 +2486,9 @@ static CYTHON_INLINE PyObject *__pyx_f_6wyhash_8backends_6cython_8_hash_cy_make_
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6wyhash_8backends_6cython_8_hash_cy_3make_secret(PyObject *__pyx_self, PyObject *__pyx_arg_seed); /*proto*/
-static char __pyx_doc_6wyhash_8backends_6cython_8_hash_cy_2make_secret[] = "make_secret(uint64_t seed) -> bytes\n\n    make 32byte secret\n    :param seed: \n    :return: \n    ";
-static PyObject *__pyx_pw_6wyhash_8backends_6cython_8_hash_cy_3make_secret(PyObject *__pyx_self, PyObject *__pyx_arg_seed) {
+static PyObject *__pyx_pw_6wyhash_8backends_6cython_7_wyhash_3make_secret(PyObject *__pyx_self, PyObject *__pyx_arg_seed); /*proto*/
+static char __pyx_doc_6wyhash_8backends_6cython_7_wyhash_2make_secret[] = "make_secret(uint64_t seed) -> bytes\n\n    make 32byte secret\n    :param seed: \n    :return: \n    ";
+static PyObject *__pyx_pw_6wyhash_8backends_6cython_7_wyhash_3make_secret(PyObject *__pyx_self, PyObject *__pyx_arg_seed) {
   uint64_t __pyx_v_seed;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
@@ -2503,18 +2501,18 @@ static PyObject *__pyx_pw_6wyhash_8backends_6cython_8_hash_cy_3make_secret(PyObj
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
-  __Pyx_AddTraceback("wyhash.backends.cython._hash_cy.make_secret", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("wyhash.backends.cython._wyhash.make_secret", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_6wyhash_8backends_6cython_8_hash_cy_2make_secret(__pyx_self, ((uint64_t)__pyx_v_seed));
+  __pyx_r = __pyx_pf_6wyhash_8backends_6cython_7_wyhash_2make_secret(__pyx_self, ((uint64_t)__pyx_v_seed));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6wyhash_8backends_6cython_8_hash_cy_2make_secret(CYTHON_UNUSED PyObject *__pyx_self, uint64_t __pyx_v_seed) {
+static PyObject *__pyx_pf_6wyhash_8backends_6cython_7_wyhash_2make_secret(CYTHON_UNUSED PyObject *__pyx_self, uint64_t __pyx_v_seed) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -2523,7 +2521,7 @@ static PyObject *__pyx_pf_6wyhash_8backends_6cython_8_hash_cy_2make_secret(CYTHO
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("make_secret", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_6wyhash_8backends_6cython_8_hash_cy_make_secret(__pyx_v_seed, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 22, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_6wyhash_8backends_6cython_7_wyhash_make_secret(__pyx_v_seed, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 22, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -2532,7 +2530,7 @@ static PyObject *__pyx_pf_6wyhash_8backends_6cython_8_hash_cy_2make_secret(CYTHO
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("wyhash.backends.cython._hash_cy.make_secret", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("wyhash.backends.cython._wyhash.make_secret", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -15703,7 +15701,7 @@ static PyBufferProcs __pyx_tp_as_buffer_array = {
 
 static PyTypeObject __pyx_type___pyx_array = {
   PyVarObject_HEAD_INIT(0, 0)
-  "wyhash.backends.cython._hash_cy.array", /*tp_name*/
+  "wyhash.backends.cython._wyhash.array", /*tp_name*/
   sizeof(struct __pyx_array_obj), /*tp_basicsize*/
   0, /*tp_itemsize*/
   __pyx_tp_dealloc_array, /*tp_dealloc*/
@@ -15825,7 +15823,7 @@ static PyMethodDef __pyx_methods_Enum[] = {
 
 static PyTypeObject __pyx_type___pyx_MemviewEnum = {
   PyVarObject_HEAD_INIT(0, 0)
-  "wyhash.backends.cython._hash_cy.Enum", /*tp_name*/
+  "wyhash.backends.cython._wyhash.Enum", /*tp_name*/
   sizeof(struct __pyx_MemviewEnum_obj), /*tp_basicsize*/
   0, /*tp_itemsize*/
   __pyx_tp_dealloc_Enum, /*tp_dealloc*/
@@ -16089,7 +16087,7 @@ static PyBufferProcs __pyx_tp_as_buffer_memoryview = {
 
 static PyTypeObject __pyx_type___pyx_memoryview = {
   PyVarObject_HEAD_INIT(0, 0)
-  "wyhash.backends.cython._hash_cy.memoryview", /*tp_name*/
+  "wyhash.backends.cython._wyhash.memoryview", /*tp_name*/
   sizeof(struct __pyx_memoryview_obj), /*tp_basicsize*/
   0, /*tp_itemsize*/
   __pyx_tp_dealloc_memoryview, /*tp_dealloc*/
@@ -16230,7 +16228,7 @@ static struct PyGetSetDef __pyx_getsets__memoryviewslice[] = {
 
 static PyTypeObject __pyx_type___pyx_memoryviewslice = {
   PyVarObject_HEAD_INIT(0, 0)
-  "wyhash.backends.cython._hash_cy._memoryviewslice", /*tp_name*/
+  "wyhash.backends.cython._wyhash._memoryviewslice", /*tp_name*/
   sizeof(struct __pyx_memoryviewslice_obj), /*tp_basicsize*/
   0, /*tp_itemsize*/
   __pyx_tp_dealloc__memoryviewslice, /*tp_dealloc*/
@@ -16309,25 +16307,25 @@ static PyTypeObject __pyx_type___pyx_memoryviewslice = {
 };
 
 static PyMethodDef __pyx_methods[] = {
-  {"hash", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_6wyhash_8backends_6cython_8_hash_cy_1hash, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6wyhash_8backends_6cython_8_hash_cy_hash},
-  {"make_secret", (PyCFunction)__pyx_pw_6wyhash_8backends_6cython_8_hash_cy_3make_secret, METH_O, __pyx_doc_6wyhash_8backends_6cython_8_hash_cy_2make_secret},
+  {"hash", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_6wyhash_8backends_6cython_7_wyhash_1hash, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6wyhash_8backends_6cython_7_wyhash_hash},
+  {"make_secret", (PyCFunction)__pyx_pw_6wyhash_8backends_6cython_7_wyhash_3make_secret, METH_O, __pyx_doc_6wyhash_8backends_6cython_7_wyhash_2make_secret},
   {0, 0, 0, 0}
 };
 
 #if PY_MAJOR_VERSION >= 3
 #if CYTHON_PEP489_MULTI_PHASE_INIT
 static PyObject* __pyx_pymod_create(PyObject *spec, PyModuleDef *def); /*proto*/
-static int __pyx_pymod_exec__hash_cy(PyObject* module); /*proto*/
+static int __pyx_pymod_exec__wyhash(PyObject* module); /*proto*/
 static PyModuleDef_Slot __pyx_moduledef_slots[] = {
   {Py_mod_create, (void*)__pyx_pymod_create},
-  {Py_mod_exec, (void*)__pyx_pymod_exec__hash_cy},
+  {Py_mod_exec, (void*)__pyx_pymod_exec__wyhash},
   {0, NULL}
 };
 #endif
 
 static struct PyModuleDef __pyx_moduledef = {
     PyModuleDef_HEAD_INIT,
-    "_hash_cy",
+    "_wyhash",
     0, /* m_doc */
   #if CYTHON_PEP489_MULTI_PHASE_INIT
     0, /* m_size */
@@ -16908,11 +16906,11 @@ static int __Pyx_modinit_function_import_code(void) {
 
 
 #if PY_MAJOR_VERSION < 3
-__Pyx_PyMODINIT_FUNC init_hash_cy(void) CYTHON_SMALL_CODE; /*proto*/
-__Pyx_PyMODINIT_FUNC init_hash_cy(void)
+__Pyx_PyMODINIT_FUNC init_wyhash(void) CYTHON_SMALL_CODE; /*proto*/
+__Pyx_PyMODINIT_FUNC init_wyhash(void)
 #else
-__Pyx_PyMODINIT_FUNC PyInit__hash_cy(void) CYTHON_SMALL_CODE; /*proto*/
-__Pyx_PyMODINIT_FUNC PyInit__hash_cy(void)
+__Pyx_PyMODINIT_FUNC PyInit__wyhash(void) CYTHON_SMALL_CODE; /*proto*/
+__Pyx_PyMODINIT_FUNC PyInit__wyhash(void)
 #if CYTHON_PEP489_MULTI_PHASE_INIT
 {
   return PyModuleDef_Init(&__pyx_moduledef);
@@ -16979,7 +16977,7 @@ bad:
 }
 
 
-static CYTHON_SMALL_CODE int __pyx_pymod_exec__hash_cy(PyObject *__pyx_pyinit_module)
+static CYTHON_SMALL_CODE int __pyx_pymod_exec__wyhash(PyObject *__pyx_pyinit_module)
 #endif
 #endif
 {
@@ -16992,7 +16990,7 @@ static CYTHON_SMALL_CODE int __pyx_pymod_exec__hash_cy(PyObject *__pyx_pyinit_mo
   #if CYTHON_PEP489_MULTI_PHASE_INIT
   if (__pyx_m) {
     if (__pyx_m == __pyx_pyinit_module) return 0;
-    PyErr_SetString(PyExc_RuntimeError, "Module '_hash_cy' has already been imported. Re-initialisation is not supported.");
+    PyErr_SetString(PyExc_RuntimeError, "Module '_wyhash' has already been imported. Re-initialisation is not supported.");
     return -1;
   }
   #elif PY_MAJOR_VERSION >= 3
@@ -17007,7 +17005,7 @@ if (!__Pyx_RefNanny) {
       Py_FatalError("failed to import 'refnanny' module");
 }
 #endif
-  __Pyx_RefNannySetupContext("__Pyx_PyMODINIT_FUNC PyInit__hash_cy(void)", 0);
+  __Pyx_RefNannySetupContext("__Pyx_PyMODINIT_FUNC PyInit__wyhash(void)", 0);
   if (__Pyx_check_binary_version() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #ifdef __Pxy_PyFrame_Initialize_Offsets
   __Pxy_PyFrame_Initialize_Offsets();
@@ -17044,7 +17042,7 @@ if (!__Pyx_RefNanny) {
   Py_INCREF(__pyx_m);
   #else
   #if PY_MAJOR_VERSION < 3
-  __pyx_m = Py_InitModule4("_hash_cy", __pyx_methods, 0, 0, PYTHON_API_VERSION); Py_XINCREF(__pyx_m);
+  __pyx_m = Py_InitModule4("_wyhash", __pyx_methods, 0, 0, PYTHON_API_VERSION); Py_XINCREF(__pyx_m);
   #else
   __pyx_m = PyModule_Create(&__pyx_moduledef);
   #endif
@@ -17062,14 +17060,14 @@ if (!__Pyx_RefNanny) {
   #if PY_MAJOR_VERSION < 3 && (__PYX_DEFAULT_STRING_ENCODING_IS_ASCII || __PYX_DEFAULT_STRING_ENCODING_IS_DEFAULT)
   if (__Pyx_init_sys_getdefaultencoding_params() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
-  if (__pyx_module_is_main_wyhash__backends__cython___hash_cy) {
+  if (__pyx_module_is_main_wyhash__backends__cython___wyhash) {
     if (PyObject_SetAttr(__pyx_m, __pyx_n_s_name_2, __pyx_n_s_main) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   }
   #if PY_MAJOR_VERSION >= 3
   {
     PyObject *modules = PyImport_GetModuleDict(); if (unlikely(!modules)) __PYX_ERR(0, 1, __pyx_L1_error)
-    if (!PyDict_GetItemString(modules, "wyhash.backends.cython._hash_cy")) {
-      if (unlikely(PyDict_SetItemString(modules, "wyhash.backends.cython._hash_cy", __pyx_m) < 0)) __PYX_ERR(0, 1, __pyx_L1_error)
+    if (!PyDict_GetItemString(modules, "wyhash.backends.cython._wyhash")) {
+      if (unlikely(PyDict_SetItemString(modules, "wyhash.backends.cython._wyhash", __pyx_m) < 0)) __PYX_ERR(0, 1, __pyx_L1_error)
     }
   }
   #endif
@@ -17090,7 +17088,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_patch_abc() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
 
-  /* "wyhash/backends/cython/_hash_cy.pyx":1
+  /* "wyhash/backends/cython/_wyhash.pyx":1
  * # cython: language_level=3             # <<<<<<<<<<<<<<
  * # cython: cdivision=True
  * from cpython.bytes cimport PyBytes_FromStringAndSize
@@ -17260,11 +17258,11 @@ if (!__Pyx_RefNanny) {
   __Pyx_XDECREF(__pyx_t_1);
   if (__pyx_m) {
     if (__pyx_d) {
-      __Pyx_AddTraceback("init wyhash.backends.cython._hash_cy", __pyx_clineno, __pyx_lineno, __pyx_filename);
+      __Pyx_AddTraceback("init wyhash.backends.cython._wyhash", __pyx_clineno, __pyx_lineno, __pyx_filename);
     }
     Py_CLEAR(__pyx_m);
   } else if (!PyErr_Occurred()) {
-    PyErr_SetString(PyExc_ImportError, "init wyhash.backends.cython._hash_cy");
+    PyErr_SetString(PyExc_ImportError, "init wyhash.backends.cython._wyhash");
   }
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();

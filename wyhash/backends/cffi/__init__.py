@@ -1,7 +1,7 @@
 """
 Copyright (c) 2008-2022 synodriver <synodriver@gmail.com>
 """
-from wyhash.backends.cffi._hash_cffi import ffi, lib
+from wyhash.backends.cffi._wyhash import ffi, lib
 
 
 def hash(data: bytes, seed: int, secret: bytes) -> int:

@@ -30,11 +30,11 @@ class build_ext_compiler_check(build_ext):
         super().build_extensions()
 
 
-c_sources = ["wyhash/backends/cython/_hash_cy.pyx"]
+c_sources = ["wyhash/backends/cython/_wyhash.pyx"]
 
 extensions = [
     Extension(
-        "wyhash.backends.cython._hash_cy",
+        "wyhash.backends.cython._wyhash",
         c_sources,
         include_dirs=["./dep"],
     ),

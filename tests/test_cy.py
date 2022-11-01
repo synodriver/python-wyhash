@@ -1,6 +1,8 @@
 """
 Copyright (c) 2008-2022 synodriver <synodriver@gmail.com>
 """
+import sys
+sys.path.append(".")
 from random import randint
 from unittest import TestCase
 
@@ -20,3 +22,7 @@ class TestAll(TestCase):
             sec = make_secret(randint(0, 255))
             self.assertEqual(hash(b"asasa", 0, sec), hash(b"asasa", 0, sec))
             self.assertNotEqual(hash(b"asasa", 0, sec), hash(b"asasa", 1, sec))
+
+if __name__ == "__main__":
+    import unittest
+    unittest.main()
